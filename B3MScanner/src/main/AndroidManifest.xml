@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="b3m.application.scanner"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="9"
+        android:targetSdkVersion="14" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme"
+        android:debuggable="true">
+        <activity
+            android:name="b3m.application.scanner.LoginActivity"
+            android:label="@string/app_name"
+            android:windowSoftInputMode="adjustResize|stateVisible" >
+
+            <intent-filter>
+
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+
+            </intent-filter>
+        </activity>
+        <activity
+                android:name="b3m.application.scanner.ParametresActivity"
+                android:label="@string/app_name"
+                android:windowSoftInputMode="adjustResize|stateVisible"
+                android:parentActivityName="b3m.application.scanner.LoginActivity" >
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+            <meta-data
+                    android:name="android.support.PARENT_ACTIVITY"
+                    android:value="b3m.application.scanner.LoginActivity" />
+
+        </activity>
+        <activity
+                android:name="b3m.application.scanner.ScanActivity"
+                android:label="@string/app_name"
+                android:windowSoftInputMode="adjustResize|stateVisible"
+                android:parentActivityName="b3m.application.scanner.LoginActivity" >
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+            <meta-data
+                    android:name="android.support.PARENT_ACTIVITY"
+                    android:value="b3m.application.scanner.LoginActivity" />
+
+        </activity>
+    </application>
+
+</manifest>

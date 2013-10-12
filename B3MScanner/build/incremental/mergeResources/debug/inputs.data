@@ -1,0 +1,19 @@
+# incremental data. DO NOT EDIT.
+# format is <lastModified> <length> <SHA-1> <path>
+# Encoding is UTF-8
+1381570062000 1503 716a263a6c476c8a4930c047964af4e7194e1ec2 /home/florent/AndroidStudioProjects/B3MScanner/B3MScanner/src/main/res/layout/activity_parametres.xml
+1381526463000 2544 4dc81888588e993ecf3b6bcbf48d82bae7d5ed31 /home/florent/AndroidStudioProjects/B3MScanner/B3MScanner/src/main/res/layout/activity_login.xml
+1381584896000 3398 8ea36eef804bd97185ee31714ddd21fa61d4a198 /home/florent/AndroidStudioProjects/B3MScanner/B3MScanner/src/main/res/layout/activity_scan.xml
+1381438817000 303 2f1f847ac0ff13d69ad73ef6aac6e4b981c4c35e /home/florent/AndroidStudioProjects/B3MScanner/B3MScanner/src/main/res/values-large/styles.xml
+1381438817000 1011 cd11596c220418f4fecc16318575841069335261 /home/florent/AndroidStudioProjects/B3MScanner/B3MScanner/src/main/res/values/styles.xml
+1381438816000 1279 29d7f274431363d17fedfb34c6afdf49e38b9720 /home/florent/AndroidStudioProjects/B3MScanner/B3MScanner/src/main/res/drawable-xhdpi/ic_launcher.png
+1381438816000 1899 ef8c9566d59f4ef613c06d2e9c76b8410155bbed /home/florent/AndroidStudioProjects/B3MScanner/B3MScanner/src/main/res/drawable-xxhdpi/ic_launcher.png
+1381438816000 695 e132b1fabc721256ac591cd82321ae8519ded53b /home/florent/AndroidStudioProjects/B3MScanner/B3MScanner/src/main/res/drawable-mdpi/ic_launcher.png
+1381438817000 381 b129b276e01126de5b3b753572ac67cbfc19454c /home/florent/AndroidStudioProjects/B3MScanner/B3MScanner/src/main/res/values-v14/styles.xml
+1381525889000 577 38125c4e5fd9a21a581278320860dad253cb5e19 /home/florent/AndroidStudioProjects/B3MScanner/B3MScanner/src/main/res/values/strings_activity_scan.xml
+1381499238000 699 2bf3c5d2bccc6376883d2c07e6133817c17b22a8 /home/florent/AndroidStudioProjects/B3MScanner/B3MScanner/src/main/res/values/strings_activity_login.xml
+1381438816000 953 24903e543f46fefa967c7e7ae81512946db40a86 /home/florent/AndroidStudioProjects/B3MScanner/B3MScanner/src/main/res/drawable-hdpi/ic_launcher.png
+1381438817000 220 ce5358ff5014a2e66487752e21ad707491010e89 /home/florent/AndroidStudioProjects/B3MScanner/B3MScanner/src/main/res/menu/login.xml
+1381569679000 284 5170d91af2c9a7e1821058475f7b1e47031d4ccf /home/florent/AndroidStudioProjects/B3MScanner/B3MScanner/src/main/res/values/string_activity_parametres.xml
+1381438817000 324 aa1f5f1723de9aee2669dc44a26fbc0ce776d35f /home/florent/AndroidStudioProjects/B3MScanner/B3MScanner/src/main/res/values-v11/styles.xml
+1381438817000 73 3aa716aeeb95843f1c952e77ef28f6fafa5bde00 /home/florent/AndroidStudioProjects/B3MScanner/B3MScanner/src/main/res/values/strings.xml

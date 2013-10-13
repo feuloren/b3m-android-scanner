@@ -17,7 +17,10 @@ import android.os.Message;
 import android.preference.PreferenceManager;
 import android.util.Log;
 import android.view.Gravity;
+import android.view.KeyEvent;
 import android.view.View;
+import android.view.WindowManager;
+import android.view.inputmethod.EditorInfo;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -53,11 +56,25 @@ public class ScanActivity extends Activity {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_scan);
+        // variable utiles pour plus tard
         succesView = findViewById(R.id.success);
         warningView = findViewById(R.id.warning);
         waitView = findViewById(R.id.wait);
         invalideView = findViewById(R.id.invalide);
         queryView = (TextView) findViewById(R.id.query);
+
+        // on réagit à l'appui sur la touche entrée pour lancer la recherche
+        queryView.setOnEditorActionListener(new TextView.OnEditorActionListener() {
+            @Override
+            public boolean onEditorAction(TextView textView, int i, KeyEvent keyEvent) {
+                if (i == EditorInfo.IME_ACTION_DONE)// touche entrée
+                    searchCommande();
+                return false;
+            }
+        });
+
+        // on cache le clavier par défaut
+        getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
 
         findViewById(R.id.scan_button).setOnClickListener(new View.OnClickListener() {
             @Override
@@ -155,6 +172,13 @@ public class ScanActivity extends Activity {
         waitView.setVisibility(View.VISIBLE);
     }
 
+    public void endWait() {
+        warningView.setVisibility(View.GONE);
+        invalideView.setVisibility(View.GONE);
+        succesView.setVisibility(View.GONE);
+        waitView.setVisibility(View.GONE);
+    }
+
     @Override
     public Object onRetainNonConfigurationInstance () {
         List<Object> list = new ArrayList<Object>();
@@ -186,6 +210,12 @@ public class ScanActivity extends Activity {
 
     protected void searchCommande() {
         String query = queryView.getText().toString();
+        // on ne fait pas de recherche vide
+        if (query.length() == 0)
+            return;
+
+        setWait();
+
         final Activity me = this;
         client.recherche(query, new Handler() {
             @Override
@@ -219,6 +249,7 @@ public class ScanActivity extends Activity {
                             }
                         });
 
+                    endWait();
                     b.show();
                 } catch(Exception e) {
                     return;

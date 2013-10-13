@@ -44,7 +44,8 @@
             android:inputType="textPersonName"
             android:ems="10"
             android:id="@+id/query" android:layout_gravity="center"
-            android:hint="@string/nom_etudiant_hint" android:focusable="true" android:focusableInTouchMode="true"/>
+            android:hint="@string/nom_etudiant_hint" android:focusable="true" android:focusableInTouchMode="true"
+            android:selectAllOnFocus="true"/>
     <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

@@ -4,11 +4,16 @@ import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.annotation.TargetApi;
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.content.ActivityNotFoundException;
 import android.content.Context;
+import android.content.DialogInterface;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
+import android.provider.Settings;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.Gravity;
@@ -78,6 +83,43 @@ public class LoginActivity extends Activity {
                 showParametres();
             }
         });
+
+        ConnectivityManager connectivityManager = (ConnectivityManager) getSystemService(CONNECTIVITY_SERVICE);
+        NetworkInfo networkInfo = connectivityManager.getActiveNetworkInfo();
+
+        if(networkInfo != null && networkInfo.isAvailable() && networkInfo.isConnected()) {
+            boolean wifi = networkInfo.getType() == ConnectivityManager.TYPE_WIFI;
+            if (!wifi) {
+                AlertDialog.Builder b = new AlertDialog.Builder(this);
+                b.setTitle(getString(R.string.no_wifi))
+                        .setMessage(getString(R.string.no_wifi_message))
+                        .setCancelable(true)
+                        .setNegativeButton(getString(R.string.no_wifi_back), new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface d, int which) {
+                            }
+                        })
+                        .setPositiveButton(getString(R.string.no_wifi_params), new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface d, int which) {
+                                startActivity(new Intent(Settings.ACTION_WIFI_SETTINGS));
+                            }
+                        });
+                b.show();
+            }
+        } else {
+            AlertDialog.Builder b = new AlertDialog.Builder(this)
+                    .setTitle(getString(R.string.no_network))
+                    .setMessage(getString(R.string.no_network_message))
+                    .setCancelable(false)
+                    .setNegativeButton(getString(R.string.no_network_quit), new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface d, int which) {
+                            startActivity(new Intent(Settings.ACTION_WIRELESS_SETTINGS));
+                        }
+                    });
+            b.show();
+        }
     }
 
     /**

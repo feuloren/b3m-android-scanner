@@ -13,14 +13,13 @@ import android.widget.TextView;
 import android.widget.Toast;
 import android.content.Context;
 
-
 /**
  * Created by florent on 11/10/13.
  */
 public class ParametresActivity extends Activity {
 
-    private static final String DEFAULT_URL = "http://b3m.florent.thevenet/";
-    private static final int DEFAULT_PORT = 8080;
+    public static final String DEFAULT_URL = "http://192.168.1.49";
+    public static final int DEFAULT_PORT = 8000;
 
     private View mParametresFormView;
     private SharedPreferences preferences;

@@ -20,10 +20,6 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import android.widget.Toast;
-import com.google.zxing.integration.android.IntentIntegrator;
-import com.google.zxing.integration.android.IntentResult;
-import org.json.*;
-import com.loopj.android.http.*;
 import android.content.Intent;
 
 import java.util.Iterator;
@@ -90,8 +86,9 @@ public class LoginActivity extends Activity {
         // On récupère le login saisi
         mLogin = mLoginView.getText().toString();
 
-        Intent myIntent = new Intent(mLoginFormView.getContext(), ScanActivity.class);
-        startActivityForResult(myIntent, 1);
+        Intent intent = new Intent(mLoginFormView.getContext(), ScanActivity.class);
+        intent.putExtra(ScanActivity.LOGIN, mLogin);
+        startActivityForResult(intent, 1);
     }
 
     public void showParametres() {

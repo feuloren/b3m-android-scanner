@@ -9,22 +9,22 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:id="@+id/succes_view" android:paddingTop="10dp" android:paddingBottom="10dp" android:text="@string/succes_string"
+            android:id="@+id/success" android:paddingTop="10dp" android:paddingBottom="10dp"
             android:gravity="center" android:autoText="false" android:background="#0bcb00"
             android:visibility="gone"/>
     <TextView android:layout_width="fill_parent" android:layout_height="wrap_content"
-              android:textAppearance="?android:attr/textAppearanceLarge" android:id="@+id/deja_scanne"
-              android:paddingTop="10dp" android:paddingBottom="10dp" android:text="@string/deja_scanne_string"
+              android:textAppearance="?android:attr/textAppearanceLarge" android:id="@+id/warning"
+              android:paddingTop="10dp" android:paddingBottom="10dp"
               android:gravity="center" android:autoText="false" android:background="#cb9e20"
               android:layout_gravity="right|center_vertical" android:visibility="gone"/>
     <TextView android:layout_width="fill_parent" android:layout_height="wrap_content"
-              android:textAppearance="?android:attr/textAppearanceLarge" android:id="@+id/non_paye"
-              android:paddingTop="10dp" android:paddingBottom="10dp" android:text="@string/non_paye_string"
-              android:gravity="center" android:autoText="false" android:background="#f82800"
-              android:layout_gravity="right|center_vertical" android:visibility="gone"/>
+              android:textAppearance="?android:attr/textAppearanceLarge" android:id="@+id/wait"
+              android:paddingTop="10dp" android:paddingBottom="10dp"
+              android:gravity="center" android:autoText="false" android:background="#dce6f8"
+              android:layout_gravity="right|center_vertical" android:visibility="gone" android:text="@string/wait"/>
     <TextView android:layout_width="fill_parent" android:layout_height="wrap_content"
               android:textAppearance="?android:attr/textAppearanceLarge" android:id="@+id/invalide"
-              android:paddingTop="10dp" android:paddingBottom="10dp" android:text="@string/invalide_string"
+              android:paddingTop="10dp" android:paddingBottom="10dp"
               android:gravity="center" android:autoText="false" android:background="#f82800"
               android:layout_gravity="right|center_vertical" android:visibility="gone"/>
     <Button
@@ -43,7 +43,7 @@
             android:layout_height="wrap_content"
             android:inputType="textPersonName"
             android:ems="10"
-            android:id="@+id/nom_etudiant" android:layout_gravity="center"
+            android:id="@+id/query" android:layout_gravity="center"
             android:hint="@string/nom_etudiant_hint" android:focusable="true" android:focusableInTouchMode="true"/>
     <Button
             android:layout_width="wrap_content"

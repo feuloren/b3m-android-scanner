@@ -57,10 +57,22 @@ public class ScanActivity extends Activity {
 
         setContentView(R.layout.activity_scan);
         // variable utiles pour plus tard
+
+        View.OnClickListener listener = new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                v.setVisibility(View.GONE);
+            }
+        };
+
         succesView = findViewById(R.id.success);
+        succesView.setOnClickListener(listener);
         warningView = findViewById(R.id.warning);
+        warningView.setOnClickListener(listener);
         waitView = findViewById(R.id.wait);
+        waitView.setOnClickListener(listener);
         invalideView = findViewById(R.id.invalide);
+        invalideView.setOnClickListener(listener);
         queryView = (TextView) findViewById(R.id.query);
 
         // on réagit à l'appui sur la touche entrée pour lancer la recherche

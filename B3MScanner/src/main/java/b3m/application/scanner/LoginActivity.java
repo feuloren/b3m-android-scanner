@@ -23,6 +23,7 @@ import android.view.View;
 import android.view.inputmethod.EditorInfo;
 import android.widget.EditText;
 import android.widget.TextView;
+import b3m.application.scanner.R;
 
 import android.widget.Toast;
 import android.content.Intent;
